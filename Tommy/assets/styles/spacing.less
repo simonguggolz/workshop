@@ -1,0 +1,86 @@
+@spacing: 50;
+@unit : 'px';
+// helper class, will never show up in resulting css
+// will be called as long the index is above 0
+.spacing (@index) when (@index >= 0) {
+	.mt-xs-@{index}{
+		// your resulting css
+		margin-top: ~"@{index}@{unit}";
+	}
+	.mb-xs-@{index}{
+		// your resulting css
+		margin-bottom: ~"@{index}@{unit}";
+	}
+	.pt-xs-@{index}{
+		// your resulting css
+		padding-top: ~"@{index}@{unit}";
+	}
+	.pb-xs-@{index}{
+		// your resulting css
+		padding-bottom: ~"@{index}@{unit}";
+	}
+	// next iteration
+	.spacing(@index - 5);
+}
+// end the loop when index is 0
+.spacing (-5) {}
+// "call" the loopingClass the first time with highest value
+.spacing (@spacing);
+@media (min-width: @screen-sm-min){
+	@spacingtablet: 50;
+	// helper class, will never show up in resulting css
+	// will be called as long the index is above 0
+	.spacingtablet (@index) when (@index >= 0) {
+		.mt-sm-@{index}{
+			// your resulting css
+			margin-top: ~"@{index}@{unit}";
+		}
+		.mb-sm-@{index}{
+			// your resulting css
+			margin-bottom: ~"@{index}@{unit}";
+		}
+		.pt-sm-@{index}{
+			// your resulting css
+			padding-top: ~"@{index}@{unit}";
+		}
+		.pb-sm-@{index}{
+			// your resulting css
+			padding-bottom: ~"@{index}@{unit}";
+		}
+		// next iteration
+		.spacingtablet(@index - 5);
+	}
+	// end the loop when index is 0
+	.spacingtablet (-5) {}
+	// "call" the loopingClass the first time with highest value
+	.spacingtablet (@spacingtablet);
+}
+@media (min-width: @screen-md-min){
+	@spacing: 50;
+	// helper class, will never show up in resulting css
+	// will be called as long the index is above 0
+	.spacing (@index) when (@index >= 0) {
+		.mt-md-@{index}{
+			// your resulting css
+			margin-top: ~"@{index}@{unit}";
+		}
+		.mb-md-@{index}{
+			// your resulting css
+			margin-bottom: ~"@{index}@{unit}";
+		}
+		.pt-md-@{index}{
+			// your resulting css
+			padding-top: ~"@{index}@{unit}";
+		}
+		.pb-md-@{index}{
+			// your resulting css
+			padding-bottom: ~"@{index}@{unit}";
+		}
+		// next iteration
+		.spacing(@index - 5);
+	}
+	// end the loop when index is 0
+	.spacing (-5) {}
+	// "call" the loopingClass the first time with highest value
+	.spacing (@spacing);
+}

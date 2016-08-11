@@ -1,0 +1,37 @@
+.pos-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  .translate(-50%, -50%);
+}
+@media (min-width: @screen-sm-min){
+  .pos-center-sm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .translate(-50%, -50%);
+  }
+}
+@media (min-width: @screen-md-min){
+  .pos-center-md {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .translate(-50%, -50%);
+  }
+  .pos-clear {
+    position: relative;
+    top: 0;
+    left: 0;
+    .translate(0, 0);
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  .text-center-xs {
+    text-align: center;
+  } 
+  .btn-block-xs {
+    width: 100%;
+  }
+}
